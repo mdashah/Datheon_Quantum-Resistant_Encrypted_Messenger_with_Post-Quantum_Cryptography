@@ -24,15 +24,6 @@ The system demonstrates a complete post-quantum secure communication workflow wh
 
 ## Option 1 – One-Click Launch (Recommended)
 
-If the repository includes:
-
-```text
-start.bat
-web/pkg/
-```
-
-Then:
-
 ```text
 1. Clone the repository
 2. Double-click start.bat
