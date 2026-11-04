@@ -40,21 +40,28 @@ The script automatically:
 Open:
 
 ```text
-http://localhost:8000/web
+http://localhost:8000
 ```
 
 in multiple browser tabs/windows.
 
-Enter any unique usernames and begin secure communication.
+Enter a username in each session, and begin secure communication.
 
 ---
 
 ## Option 2 – Manual Launch
 
+### Build WebAssembly Module (One-Time Setup)
+
+```bash
+cargo build --release --target wasm32-unknown-unknown --lib
+wasm-bindgen target/wasm32-unknown-unknown/release/pqc_messenger.wasm --out-dir web/pkg --target web
+```
+
 ### Start Relay Server
 
 ```bash
-cargo run --bin server
+cargo run --bin server 
 ```
 
 Expected output:
@@ -69,13 +76,14 @@ Expected output:
 ### Start Web Server
 
 ```bash
+cd web
 python -m http.server 8000
 ```
 
 ### Open Browser
 
 ```text
-http://localhost:8000/web
+http://localhost:8000
 ```
 
 Open multiple browser windows and use different usernames.
