@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Secure Messenger</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>Quantum Secure Messenger</h1>
+        <button id="theme-toggle" onclick="toggleTheme()">🌙 Dark Mode</button>
+    </div>
+
+    <div class="security-panel">
+        <h2>Quantum Security Inspection</h2>
+        <div id="kem-status">🔄 Initializing ML-KEM (WASM)...</div>
+        <div id="aes-status">🔄 Initializing AES-256-GCM...</div>
+        <div id="ratchet-status">🔄 Initializing Double Ratchet...</div>
+        <div id="relay-status">🔄 Initializing Relay...</div>
+        <div id="payload-status">🔄 Waiting for traffic...</div>
+        <div id="last-payload">Last Payload: None</div>
+        <div id="connection-status">🔴 Disconnected</div>
+    </div>
+
+    <div class="user-panel">
+        <input id="username" type="text" placeholder="Enter Username" />
+    </div>
+
+    <div id="chat-box" class="chat-box"></div>
+
+    <div class="input-panel">
+        <input id="message-input" type="text" placeholder="Type a message..." />
+        <button onclick="sendMessage()">Send</button>
+    </div>
+</div>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
