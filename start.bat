@@ -7,7 +7,7 @@ echo ==================================
 echo.
 
 echo Starting Relay Server...
-start cmd /k "cargo run --bin server --features native"
+start cmd /k "cargo run --bin server"
 
 timeout /t 5 >nul
 
